@@ -8,6 +8,12 @@ Why is this useful?
 
 The Kusto examples were not super detailed, especially around authentication. Also, the Kusto examples did not include any mechanism to ingest data from an Array or data that was not already in a Stream.
 
+## Dependencies
+
+- NodeJS 12.3+ due to the use of [stream.Readable.from(iterable, [options])](https://nodejs.org/docs/latest-v12.x/api/stream.html#stream_stream_readable_from_iterable_options).
+- An Azure Kusto Cluster
+- App AAD Credentials
+
 ## Bootstrap
 
 To use this example, you need a Kusto table. You may use this code in your Kusto query tool to create and setup the table.
@@ -56,7 +62,5 @@ Kusto Values:
 
 The following two examples illustrate ingesting from a file Stream and an Array. 
 
-- example-static-data-from-file-as-stream.js
-  An example of ingesting data into Kusto from a static file (a file Stream).
-- example-random-data-from-array-of-objects.js
-  An example of ingesting data into Kusto from a dynamic (random) array of objects.
+- example-static-data-from-file-as-stream.js - An example of ingesting data into Kusto from a static file (a file Stream).
+- example-random-data-from-array-of-objects.js - An example of ingesting data into Kusto from a dynamic (random) array of objects.
