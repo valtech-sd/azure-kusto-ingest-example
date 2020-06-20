@@ -19,6 +19,7 @@ const testDataArray = [];
 const howMany = 100; // how many records/rows will be generated
 for (let i = 0; i < howMany; i++) {
   testDataArray.push({
+    pipeline_path: '/usr/share/logstash/input/Simple.json',
     when: new Date().toISOString(),
     what: Math.random().toString(),
   });
